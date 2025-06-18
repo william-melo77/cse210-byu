@@ -1,9 +1,30 @@
 using System;
 
-class Program
+namespace HomeworkInheritance
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World! This is the Homework Project.");
+        static void Main(string[] args)
+        {
+            var basic = new Assignment("Samuel Bennett", "Multiplication");
+            Console.WriteLine(basic.GetSummary());
+
+            var math = new MathAssignment(
+                "Roberto Rodriguez",
+                "Fractions",
+                "7.3",
+                "8-19"
+            );
+            Console.WriteLine(math.GetSummary());
+            Console.WriteLine(math.GetHomeworkList());
+
+            var writing = new WritingAssignment(
+                "Mary Waters",
+                "European History",
+                "The Causes of World War II"
+            );
+            Console.WriteLine(writing.GetSummary());
+            Console.WriteLine(writing.GetWritingInformation());
+        }
     }
 }
