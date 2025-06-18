@@ -1,9 +1,19 @@
 using System;
-
-class Program
+namespace Mindfulness
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World! This is the Mindfulness Project.");
+        static void Main()
+        {
+            var menu = new ActivityMenu();
+            int choice;
+            do
+            {
+                menu.DisplayMenu();
+                choice = menu.GetChoice();
+                menu.HandleChoice(choice);
+            }
+            while (choice != 0);
+        }
     }
 }
