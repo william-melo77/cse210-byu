@@ -1,9 +1,14 @@
 using System;
 
-class Program
+namespace Sun
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project.");
+        static void Main(string[] args)
+        {   
+            // 🚀 Extra features added: ProgressGoal (accumulative progress) and NegativeGoal (penalty for bad habits)
+            var manager = new GoalManager();
+            manager.Start();
+        }
     }
 }
